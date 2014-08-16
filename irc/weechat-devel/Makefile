@@ -1,9 +1,9 @@
 # $FreeBSD$
 
-PORTNAME=	weechat
-PORTVERSION=	1.0
+PORTNAME=	weechat-devel
+PORTVERSION=	20140816
 CATEGORIES=	irc
-MASTER_SITES=	http://weechat.org/files/src/
+MASTER_SITES=	http://weechat.org/files/src/devel/
 
 MAINTAINER=	jase@FreeBSD.org
 COMMENT=	Lightweight and user friendly ncurses based IRC client
@@ -13,17 +13,23 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 
-CONFLICTS=	weechat-devel-1.*
+CONFLICTS=	weechat-1.*
 
 USE_LDCONFIG=	yes
 USES=		cmake iconv ncurses
 CMAKE_ARGS+=	-DENABLE_GUILE=no
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
-OPTIONS_DEFINE=	RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE ASPELL \
-		GNUTLS NLS ICON CA_BUNDLE MANPAGES DOCS
-OPTIONS_DEFAULT=RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE ASPELL \
-		GNUTLS CA_BUNDLE ICON MANPAGES
+WRKSRC= ${WRKDIR}/${PORTNAME}
+
+# Please note: the DEBUG option is *NOT* empty, it is utilised by
+# bsd.cmake.mk to set the cmake build type to Debug instead of
+# Release.
+
+OPTIONS_DEFINE=	RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE DEBUG ASPELL \
+		GNUTLS NLS ICON CA_BUNDLE MANPAGES
+OPTIONS_DEFAULT=RUBY PYTHON PERL TCL LUA CHARSET BACKTRACE DEBUG ASPELL \
+		GNUTLS ICON CA_BUNDLE MANPAGES
 OPTIONS_SUB=	yes
 
 BACKTRACE_DESC=	Provide crash backtraces
@@ -66,11 +72,6 @@ MANPAGES_BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
 		asciidoc:${PORTSDIR}/textproc/asciidoc
 MANPAGES_CMAKE_ON=	-DENABLE_MAN=yes -DMANDIR=${MANPREFIX}/man
 MANPAGES_CMAKE_OFF=	-DENABLE_MAN=no
-
-DOCS_BUILD_DEPENDS=	asciidoc:${PORTSDIR}/textproc/asciidoc \
-		source-highlight>=3.1.5:${PORTSDIR}/textproc/source-highlight
-DOCS_CMAKE_ON=	-DENABLE_DOC=yes
-DOCS_CMAKE_OFF=	-DENABLE_DOC=no
 
 RUBY_USE=	RUBY=yes
 RUBY_CMAKE_OFF=	-DENABLE_RUBY=no
