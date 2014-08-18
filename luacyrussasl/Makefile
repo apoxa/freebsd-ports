@@ -1,0 +1,43 @@
+# $FreeBSD$
+
+PORTNAME=		cyrussasl
+PORTVERSION=	20140818
+CATEGORIES=		security
+PKGNAMEPREFIX=  ${LUA_PKGNAMEPREFIX}
+
+MAINTAINER=		ben@unpatched.de
+COMMENT=		Cyrus SASL library for Lua
+
+LICENSE=		BSD3CLAUSE
+
+LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
+
+CFLAGS+=		-fpic -I${LOCALBASE}/include -I${LUA_INCDIR}
+LDFLAGS+=		-lsasl2
+
+USE_GITHUB=		yes
+GH_ACCOUNT=		JorjBauer
+GH_COMMIT=		848edd3
+GH_PROJECT=		lua-cyrussasl
+GH_TAGNAME=		${GH_COMMIT}
+
+USES=			lua
+
+PLIST_FILES=	%%LUA_MODLIBDIR%%/${PORTNAME}.so
+
+BUILD_VERSION=	git-1.0.${GH_COMMIT}
+
+post-patch:
+	${REINPLACE_CMD} \
+		-e "s+%%LUA_INCDIR%%+${LUA_INCDIR}+g" \
+		-e "s+%%LUA_MODSHAREDIR%%+${LUA_MODSHAREDIR}+g" \
+		-e "s+%%LUA_MODLIBDIR%%+${LUA_MODLIBDIR}+g" \
+		-e "s+%%LOCALBASE%%+${LOCALBASE}+g" \
+		-e "s+%%BUILD_VERSION%%+${BUILD_VERSION}+g" \
+		${WRKSRC}/Makefile
+
+do-install:
+	@${MKDIR} ${STAGEDIR}${LUA_MODLIBDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}.so ${STAGEDIR}${LUA_MODLIBDIR}
+
+.include <bsd.port.mk>
