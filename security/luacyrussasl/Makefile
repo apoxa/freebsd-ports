@@ -18,7 +18,7 @@ GH_COMMIT=		848edd3
 GH_PROJECT=		lua-cyrussasl
 GH_TAGNAME=		${GH_COMMIT}
 
-USES=			lua
+USES=			lua:51
 
 CFLAGS+=		-fpic -I${LOCALBASE}/include -I${LUA_INCDIR}
 LDFLAGS+=		-L${LOCALBASE}/lib -lsasl2
