@@ -1,5 +1,5 @@
 --- ./Makefile.orig	2014-08-18 12:03:10.738274708 +0200
-+++ ./Makefile	2014-08-18 12:07:59.219274711 +0200
++++ ./Makefile	2014-08-18 12:13:32.420398028 +0200
 @@ -11,11 +11,11 @@
  #CPATH=/usr/lib/lua/5.1
  
@@ -26,7 +26,15 @@
  TARGET=cyrussasl.so
  OBJS=cyrussasl.o luaabstract.o context.o
  
-@@ -46,7 +44,7 @@
+@@ -39,14 +37,11 @@
+ clean:
+ 	rm -f *.o *.so *~
+ 
+-distclean: clean
+-	rm -f $(BUILD_VERSION) $(BRANCH_VERSION)
+-
+-$(TARGET): version $(OBJS)
++$(TARGET): $(OBJS)
  	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJS)
  
  .c.o:
@@ -35,7 +43,7 @@
  
  # Dependencies
  cyrussasl.c: context.h luaabstract.c luaabstract.h
-@@ -54,12 +52,3 @@
+@@ -54,12 +49,3 @@
  luaabstract.c: luaabstract.h
  
  context.c: context.h
