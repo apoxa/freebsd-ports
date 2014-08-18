@@ -12,9 +12,6 @@ LICENSE=		BSD3CLAUSE
 
 LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 
-CFLAGS+=		-fpic -I${LOCALBASE}/include -I${LUA_INCDIR}
-LDFLAGS+=		-lsasl2
-
 USE_GITHUB=		yes
 GH_ACCOUNT=		JorjBauer
 GH_COMMIT=		848edd3
@@ -22,6 +19,12 @@ GH_PROJECT=		lua-cyrussasl
 GH_TAGNAME=		${GH_COMMIT}
 
 USES=			lua
+
+CFLAGS+=		-fpic -I${LOCALBASE}/include -I${LUA_INCDIR}
+LDFLAGS+=		-lsasl2
+MAKE_ARGS=		LDFLAGS="${LDFLAGS}" \
+				LUAPATH="${LUA_MODSHAREDIR}" \
+				CPATH="${LUA_MODLIBDIR}"
 
 PLIST_FILES=	%%LUA_MODLIBDIR%%/${PORTNAME}.so
 
