@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	keybase
-PORTVERSION=	0.4.15
+PORTVERSION=	0.5.1
 CATEGORIES=	security
 MASTER_SITES=	https://dist.keybase.io/pkg/files/ \
 		LOCAL/bdrewery/${PORTNAME}/ \
