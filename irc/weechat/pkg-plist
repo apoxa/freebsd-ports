@@ -24,48 +24,48 @@ libdata/pkgconfig/weechat.pc
 %%PYTHON%%lib/weechat/plugins/python.so
 %%RUBY%%lib/weechat/plugins/ruby.so
 %%TCL%%lib/weechat/plugins/tcl.so
-%%PORTDOCS%%%%DOCSDIR%%/weechat_dev.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_dev.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_dev.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_faq.de.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_faq.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_faq.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_faq.it.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_faq.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_faq.pl.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_plugin_api.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_plugin_api.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_plugin_api.it.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_plugin_api.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.de.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.es.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.it.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.pl.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_quickstart.ru.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_relay_protocol.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_relay_protocol.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_relay_protocol.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_scripting.de.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_scripting.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_scripting.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_scripting.it.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_scripting.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_scripting.pl.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_tester.de.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_tester.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_tester.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_tester.it.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_tester.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_tester.pl.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_user.de.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_user.en.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_user.fr.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_user.it.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_user.ja.html
-%%PORTDOCS%%%%DOCSDIR%%/weechat_user.pl.html
+%%DOCS%%%%DOCSDIR%%/weechat_dev.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_dev.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_dev.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_faq.de.html
+%%DOCS%%%%DOCSDIR%%/weechat_faq.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_faq.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_faq.it.html
+%%DOCS%%%%DOCSDIR%%/weechat_faq.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_faq.pl.html
+%%DOCS%%%%DOCSDIR%%/weechat_plugin_api.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_plugin_api.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_plugin_api.it.html
+%%DOCS%%%%DOCSDIR%%/weechat_plugin_api.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.de.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.es.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.it.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.pl.html
+%%DOCS%%%%DOCSDIR%%/weechat_quickstart.ru.html
+%%DOCS%%%%DOCSDIR%%/weechat_relay_protocol.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_relay_protocol.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_relay_protocol.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_scripting.de.html
+%%DOCS%%%%DOCSDIR%%/weechat_scripting.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_scripting.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_scripting.it.html
+%%DOCS%%%%DOCSDIR%%/weechat_scripting.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_scripting.pl.html
+%%DOCS%%%%DOCSDIR%%/weechat_tester.de.html
+%%DOCS%%%%DOCSDIR%%/weechat_tester.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_tester.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_tester.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_tester.it.html
+%%DOCS%%%%DOCSDIR%%/weechat_tester.pl.html
+%%DOCS%%%%DOCSDIR%%/weechat_user.de.html
+%%DOCS%%%%DOCSDIR%%/weechat_user.en.html
+%%DOCS%%%%DOCSDIR%%/weechat_user.fr.html
+%%DOCS%%%%DOCSDIR%%/weechat_user.it.html
+%%DOCS%%%%DOCSDIR%%/weechat_user.ja.html
+%%DOCS%%%%DOCSDIR%%/weechat_user.pl.html
 %%ICON%%share/icons/hicolor/32x32/apps/weechat.png
 %%NLS%%share/locale/cs/LC_MESSAGES/weechat.mo
 %%NLS%%share/locale/de/LC_MESSAGES/weechat.mo
@@ -78,19 +78,3 @@ libdata/pkgconfig/weechat.pc
 %%NLS%%share/locale/pt_BR/LC_MESSAGES/weechat.mo
 %%NLS%%share/locale/ru/LC_MESSAGES/weechat.mo
 %%NLS%%share/locale/tr/LC_MESSAGES/weechat.mo
-@dirrmtry include/weechat
-@dirrmtry lib/weechat/plugins
-@dirrmtry lib/weechat
-%%MANPAGES%%@dirrmtry man/de/man1
-%%MANPAGES%%@dirrmtry man/de
-%%MANPAGES%%@dirrmtry man/fr/man1
-%%MANPAGES%%@dirrmtry man/fr
-%%MANPAGES%%@dirrmtry man/it/man1
-%%MANPAGES%%@dirrmtry man/it
-%%MANPAGES%%@dirrmtry man/pl/man1
-%%MANPAGES%%@dirrmtry man/pl
-%%PORTDOCS%%@dirrmtry %%DOCSDIR%%
-%%ICON%%@dirrmtry share/icons/hicolor/32x32/apps
-%%ICON%%@dirrmtry share/icons/hicolor/32x32
-%%ICON%%@dirrmtry share/icons/hicolor
-%%ICON%%@dirrmtry share/icons
