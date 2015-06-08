@@ -1,5 +1,5 @@
 # Created by: Udo Schweigert
-# $FreeBSD: head/mail/mutt/Makefile 383141 2015-04-03 15:56:57Z thomas $
+# $FreeBSD: head/mail/mutt/Makefile 386495 2015-05-16 01:19:11Z jbeich $
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.23
@@ -45,7 +45,7 @@ CONFIGURE_ARGS=	--disable-fcntl --with-ssl=${OPENSSLBASE} \
 		--enable-external-dotlock --enable-pop --enable-imap \
 		--disable-warnings
 
-USES+=		shebangfix
+USES+=		cpe shebangfix
 SHEBANG_FILES=	doc/gen-map-doc smime_keys.pl contrib/smime_keys_test.pl
 
 .if defined(MUTT_CONFIGURE_ARGS)
